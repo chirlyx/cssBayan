@@ -1,0 +1,77 @@
+/* rubik-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/rubik-v26-latin-regular.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('../fonts/rubik-v26-latin-regular.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* rubik-600 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/rubik-v26-latin-600.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('../fonts/rubik-v26-latin-600.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: black;
+    background-color: #fff5f5;
+}
+
+h1 {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 1.5em;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 5vh;
+    padding: 5vh;
+    background-color: #fff;
+}
+
+.accordion-input:checked+.meme-section {
+    max-height: 20em;
+}
+
+.accordion-section {
+    box-shadow: 0 0.2em 0.4em 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 3vh;
+}
+
+.meme-section {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.meme-section img {
+    height: 90%;
+}
