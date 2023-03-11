@@ -61,6 +61,10 @@ h1 {
     max-height: 15em;
 }
 
+.accordion-label:hover .meme-section {
+    max-height: 15em;
+}
+
 .accordion-input:checked ~ .icon {
     transform: rotate(45deg);
 }
@@ -109,3 +113,40 @@ h1 {
     height: 14em;
     margin-bottom: 1em;
 }
+
+@media screen and (min-width: 320px) {
+    body {
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    .wrapper {
+        padding: 1em;
+        margin-top: 2em;
+    }
+  }
+
+  @media screen and (min-width: 820px) {
+    body {
+        font-size: 1.2em;
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+
+  
+  }
+
+  @media screen and (min-width: 1920px) {
+    body {
+        font-size: 1.4em;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+  }
