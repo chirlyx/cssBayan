@@ -51,7 +51,7 @@ h1 {
     background-color: #fff;
 }
 
-.accordion-input:checked+.meme-section {
+.accordion-input:checked+.accordion-label .meme-section {
     max-height: 15em;
 }
 
@@ -59,24 +59,25 @@ h1 {
     border-radius: 70%;
     opacity: 0;
 }
-.accordion-input:checked+.meme-section img {
+.accordion-input:checked+.accordion-label .meme-section img {
     transition: 0.5s;
     border-radius: 0;
     opacity: 1;
 }
 
-.accordion-input:checked~.accordion-label-text {
+.accordion-input:checked+.accordion-label .accordion-label-text {
     color: rgb(34, 34, 34);
-    font-weight: 600;
     text-shadow: 0.1em 0.1em 0.2em rgb(255, 111, 135);
 }
 
-.accordion-input:checked~.icon {
-    transform: rotate(45deg);
+.accordion-input:checked+.accordion-label .icon {
+    transform: rotate(90deg);
 }
 
 .accordion-input {
     display: none;
+    width: 0;
+    height: 0;
 }
 
 .accordion-label {
@@ -98,6 +99,7 @@ h1 {
 }
 
 .icon {
+    transition: 0.5s;
     transform: rotate(45deg);
 }
 
@@ -144,6 +146,7 @@ h1 {
     h1 {
         font-size: 1.4em;
     }
+
 }
 
 @media screen and (min-width: 1920px) {
@@ -158,24 +161,34 @@ h1 {
 
 @media (hover: hover) {
     .accordion:hover {
-        color: rgb(34, 34, 34);
-        font-weight: 600;
+        transition: 0.5s;
+        color: #222222;
         text-shadow: 0.1em 0.1em 0.2em rgb(255, 111, 135);
     }
 
-    .accordion-input:hover+.meme-section img {
+    .accordion:not(:hover) {
+        transition: 0.5s;
+        color: #4f4f4f;
+        text-shadow: none;
+    }
+
+    .accordion:hover .icon {
+        opacity: 1;
+    }
+
+    .accordion-input:hover+.accordion-label .meme-section img {
         transition: 0.5s;
         border-radius: 0;
         opacity: 1;
     }
 
-    .accordion-input:not(:hover)+.meme-section img {
+    .accordion-input:not(:hover)+.accordion-label .meme-section img {
         transition: 0.5s;
         border-radius: 70%;
         opacity: 0;
     }
 
-    .accordion-input:checked+.meme-section img {
+    .accordion-input:checked+.accordion-label .meme-section img {
         transition: 0.5s;
         border-radius: 0;
         opacity: 1;
@@ -184,5 +197,13 @@ h1 {
     .accordion-label:hover .meme-section {
         max-height: 15em;
     }
-    
+
+    .accordion-label:hover .icon {
+        transform: rotate(90deg);
+    }
+
+    .icon {
+        transition: 0.5s;
+        opacity: 0;
+    }    
 }
