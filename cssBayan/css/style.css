@@ -82,14 +82,14 @@ h1 {
     padding: 1em;
 }
 
-.accordion-label-text:active {
-    color: #ff6f87;
-}
-
 .accordion-section {
     box-shadow: 0 0.2em 0.4em 0 rgba(0, 0, 0, 0.2);
     margin-bottom: 3vh;
     min-height: 3em;
+}
+
+.accordion-section:active {
+    color: #ff6f87;
 }
 
 .icon {
