@@ -1,0 +1,212 @@
+/* rubik-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/rubik-v26-latin-regular.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('../fonts/rubik-v26-latin-regular.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* rubik-600 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/rubik-v26-latin-600.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+ */
+        url('../fonts/rubik-v26-latin-600.woff') format('woff');
+    /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #4f4f4f;
+    background-color: #fff5f5;
+}
+
+h1 {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 1.3em;
+}
+
+
+.accordion-input:checked+.accordion-label .meme-section {
+    max-height: 15em;
+}
+
+
+.accordion-input:checked+.accordion-label .meme-section img {
+    transition: 0.5s;
+    border-radius: 0;
+    opacity: 1;
+}
+
+.accordion-input:checked+.accordion-label .accordion-label-text {
+    color: rgb(34, 34, 34);
+    text-shadow: 0.1em 0.1em 0.2em rgb(255, 111, 135);
+}
+
+.accordion-input:checked+.accordion-label .icon {
+    transform: rotate(90deg);
+}
+
+.accordion-input {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+.accordion-label {
+    height: 100%;
+    justify-content: space-between;
+}
+
+
+.accordion-label-text {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.accordion-section {
+    box-shadow: 0 0.2em 0.4em 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 3vh;
+    min-height: 3em;
+}
+
+.accordion-section:active {
+    color: #ff6f87;
+}
+
+.icon {
+    transition: 0.5s;
+    transform: rotate(45deg);
+}
+
+.line {
+    height: 0.15em;
+    margin-bottom: 1.5em;
+    background-color: #d5d5d5;
+}
+
+.meme-section {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    display: flex;
+    justify-content: center;
+}
+
+.meme-section img {
+    border-radius: 70%;
+    opacity: 0;
+    width: 14em;
+    height: 14em;
+    margin-bottom: 1em;
+}
+
+.wrapper {
+    max-width: 80vw;
+    margin: 0 auto;
+    margin-top: 5vh;
+    padding: 5vh;
+    background-color: #fff;
+}
+
+@media screen and (min-width: 320px) {
+    body {
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    .wrapper {
+        padding: 1em;
+        margin-top: 2em;
+    }
+}
+
+@media screen and (min-width: 820px) {
+    body {
+        font-size: 1.2em;
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    body {
+        font-size: 1.4em;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+}
+
+@media (hover: hover) {
+    .accordion:hover {
+        transition: 0.5s;
+        color: #222222;
+        text-shadow: 0.1em 0.1em 0.2em #ff6f87;
+    }
+
+    .accordion:not(:hover) {
+        transition: 0.5s;
+        color: #4f4f4f;
+        text-shadow: none;
+    }
+
+    .accordion:hover .icon {
+        opacity: 1;
+    }
+
+    .accordion-input:hover+.accordion-label .meme-section img {
+        transition: 0.5s;
+        border-radius: 0;
+        opacity: 1;
+    }
+
+    .accordion-input:not(:hover)+.accordion-label .meme-section img {
+        transition: 0.5s;
+        border-radius: 70%;
+        opacity: 0;
+    }
+
+    .accordion-input:checked+.accordion-label .meme-section img {
+        transition: 0.5s;
+        border-radius: 0;
+        opacity: 1;
+    }
+
+    .accordion-label:hover .meme-section {
+        max-height: 15em;
+    }
+
+    .accordion-label:hover .icon {
+        transform: rotate(90deg);
+    }
+
+    .icon {
+        transition: 0.5s;
+        opacity: 0;
+    }
+}
